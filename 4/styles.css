@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background-color: #141e25;
+}
+
+pre {
+    padding: 20px;
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;       
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container-output {
+    display: flex;
+    align-items: center;
+    margin-left: 12rem;
+    width: 60rem;
+    border: 5px double #f3eed9;
+    color: white;
+}
+
+.container-output pre {
+    word-break: any;
+}
+
+.inputfile {
+    display: none;
+}
+
+.js .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.inputfile + label {
+    color: #f1e5e6;
+    background-color: #d3394c;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label,
+.inputfile + label:hover {
+    background-color: #722040;
+}
