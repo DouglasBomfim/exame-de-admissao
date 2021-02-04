@@ -9,7 +9,6 @@ class ReaderFile {
 function fileSelected(e) {
     var output = document.getElementById("output");
     var textReader = new ReaderFile();
-    console.log(e.target.files[0]);
     if (e.target.files && e.target.files[0]) {
         e.target.files[0].text().then(
             text => {

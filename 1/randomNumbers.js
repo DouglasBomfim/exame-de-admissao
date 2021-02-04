@@ -9,5 +9,3 @@ const lotteryNumbers = () => {
         return a - b;
     })
 };
-
-console.log(lotteryNumbers());

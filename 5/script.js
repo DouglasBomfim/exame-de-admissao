@@ -1,5 +1,3 @@
-const tableBody = document.querySelector('#table_body')
-
 const options = {
     method: 'GET',
     mode: 'cors',
@@ -14,7 +12,7 @@ const getLocation = (obj) => {
     return `${obj.street.name}, ${obj.street.number} - ${obj.city}, ${obj.state} - ${obj.country}`;
 }
 
-const populate = (response) => {
+const populate = (response, tableBody) => {
     let new_body = `<tr>`;
     new_body += `<td>${getName(response.name)}</td>`;
     new_body += `<td>${getLocation(response["location"])}</td>`;
@@ -26,11 +24,12 @@ const populate = (response) => {
 };
 
 const loadContent = () => {
+    const tableBody = document.querySelector('#table_body');
     fetch("https://randomuser.me/api?results=5", options).then(
     response => response.json()
         .then(data => data.results.forEach(
             data => {
-                populate(data);
+                populate(data, tableBody);
             }
         ))
     )

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 * {
     font-family: 'Roboto Condensed', sans-serif;
@@ -9,6 +10,7 @@ body {
 }
 
 pre {
+    font-family: 'Ubuntu Mono', monospace;
     padding: 20px;
     white-space: pre-wrap;       
     white-space: -moz-pre-wrap;  
